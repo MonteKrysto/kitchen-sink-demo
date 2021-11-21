@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, ReactLocation } from "react-location";
 // import Member from "./pages/Members/member";
-import { queryClient } from "./App";
+// import { queryClient } from "./App";
 // import { fetchMember } from "./hooks/useMembers";
 // import { Members } from "./pages/members";
 

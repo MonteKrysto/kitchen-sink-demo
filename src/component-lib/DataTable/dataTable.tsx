@@ -61,7 +61,7 @@ const DataTableMain: React.FC<Partial<DataTableProps>> = ({
 }: Partial<DataTableProps>) => {
   const { data, defaultColumns, caption, captionPlacement, numeric } = useDataTable();
   const columns = Object.keys(Object.assign({}, ...data)).filter(c => c !== "id");
-  console.log("linkCols: ", linkColumns);
+
   return (
     <>
       <ChakraTable variant='simple' {...rest}>
@@ -71,11 +71,9 @@ const DataTableMain: React.FC<Partial<DataTableProps>> = ({
         </Thead>
         <Tbody>
           {data.map(row => {
-            console.log("row id: ", defaultColumns);
             return (
               <Tr key={row.id}>
                 {defaultColumns.map(column => {
-                  console.log("col: ", column, linkColumns?.field);
                   return !Array.isArray(row[column]) ? (
                     linkColumns?.field === column ? (
                       <Td key={column}>
